@@ -1,111 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tatanka Ledger — Know what your contract actually owes you</title>
-<meta name="description" content="A private production and compensation tracker for physicians, NPs, and PAs. Log shifts and encounters and see your wRVUs, shift pay, and bonuses — paycheck by paycheck. No patient data, ever.">
-<link rel="canonical" href="https://tatankaledger.com/">
-<meta property="og:title" content="Tatanka Ledger">
-<meta property="og:description" content="Know exactly what your contract owes you. A private production & pay tracker for physicians, NPs, and PAs.">
-<meta property="og:image" content="https://tatankaledger.com/logo.png">
-<link rel="icon" href="logo.png">
+<title>Tatanka Ledger</title>
+<link rel="icon" href="/app/logo-transparent.png">
+<link rel="canonical" href="https://tatankaledger.com/app/">
+<meta http-equiv="refresh" content="0; url=/app/">
+<script>location.replace('/app/' + location.search + location.hash);</script>
 <style>
-  :root{ --ink:#0F1216; --slate:#1F262E; --slatelight:#2C353F; --parchment:#F5F1E8; --gold:#C9A961; --sage:#7B8B6F; --fade:#8A8F95; --line:#3D4751; }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--ink);color:var(--parchment);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-  body{background-image:linear-gradient(rgba(15,18,22,.5),rgba(15,18,22,.72)),url("bg.png");background-size:cover;background-position:center;background-attachment:fixed;background-repeat:no-repeat}
-  .card,.privacy{background:rgba(31,38,46,.86)}
-  a{color:var(--gold);text-decoration:none}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-  header{padding:64px 0 32px;text-align:center}
-  header img{width:172px;height:auto;display:inline-block}
-  h1{font-family:Georgia,"Times New Roman",serif;font-size:46px;margin:28px 0 8px;letter-spacing:.5px}
-  .tag{color:var(--fade);font-size:19px;max-width:620px;margin:0 auto 28px}
-  .stores span{display:inline-block;border:1px solid var(--line);color:var(--parchment);border-radius:14px;padding:12px 22px;margin:6px;font-size:14px;letter-spacing:.5px}
-  .appcta{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;border-radius:14px;padding:14px 28px;font-size:16px;letter-spacing:.3px}
-  .badge{color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:2px}
-  section{padding:48px 0}
-  h2{font-family:Georgia,serif;font-size:30px;text-align:center;margin-bottom:8px}
-  .sub{color:var(--fade);text-align:center;max-width:640px;margin:0 auto 36px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-  .card{background:var(--slate);border:1px solid var(--line);border-radius:18px;padding:22px}
-  .card h3{color:var(--gold);font-size:18px;margin-bottom:6px}
-  .card p{color:var(--fade);font-size:15px}
-  .shots{display:flex;gap:18px;overflow-x:auto;padding:8px 0 18px;scroll-snap-type:x mandatory}
-  .shots img{height:560px;border-radius:24px;border:2px solid var(--slatelight);scroll-snap-align:center;flex:0 0 auto}
-  .privacy{background:var(--slate);border:1px solid var(--line);border-radius:18px;padding:28px;text-align:center;max-width:760px;margin:0 auto}
-  footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--fade);font-size:14px}
-  footer a{margin:0 10px}
-  @media(max-width:600px){ h1{font-size:36px} .shots img{height:460px} }
+  html,body{height:100%;margin:0}
+  body{background:#0F1216;color:#C9A961;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;display:flex;align-items:center;justify-content:center}
+  a{color:#C9A961}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <img src="logo-transparent.png" alt="Tatanka Ledger logo">
-    <h1>Tatanka Ledger</h1>
-    <p class="tag">Know exactly what your contract owes you. A private production &amp; pay tracker for physicians, NPs, and PAs — log your shifts and encounters and see your wRVUs, shift pay, and bonuses, paycheck by paycheck.</p>
-    <p style="margin:8px 0 18px"><a class="appcta" href="/app/">Open the web app &rarr;</a></p>
-    <div class="stores">
-      <span>App Store — Coming Soon</span>
-      <span>Google Play — Coming Soon</span>
-    </div>
-    <p class="tag" style="font-size:14px;margin-top:14px">Use it right now in your browser — log shifts and see what your contract owes you. Native iOS &amp; Android apps are on the way.</p>
-  </div>
-</header>
-
-<section>
-  <div class="wrap">
-    <p class="badge" style="text-align:center">What it does</p>
-    <h2>Your production, priced to your contract</h2>
-    <p class="sub">Tatanka Ledger turns the shifts you work into the dollars your contract actually owes — and never touches patient data.</p>
-    <div class="grid">
-      <div class="card"><h3>No patient data, ever</h3><p>An encounter is only a number, a time, and CPT codes. No names, no dates of birth, no record numbers — those fields don't exist by design.</p></div>
-      <div class="card"><h3>Exact compensation math</h3><p>Bundled CMS wRVU values for every year, with effective-dated contracts that handle fee-schedule changes, raises, and amendments over time.</p></div>
-      <div class="card"><h3>Paycheck reconciliation</h3><p>Record what you were actually paid and compare it, period by period, to what your contract owes. Variances are flagged automatically.</p></div>
-      <div class="card"><h3>Calendar &amp; overlays</h3><p>See pay, wRVUs, patients, paychecks, and your projected bonus right on the calendar — log today or backfill any day you missed.</p></div>
-      <div class="card"><h3>Import &amp; export</h3><p>Bring in your existing spreadsheet, and export CSV reports for any date range to save or email.</p></div>
-      <div class="card"><h3>Private &amp; yours alone</h3><p>Cloud backup tied to your own account, readable only by you. No ads, no tracking, and your data is never sold or pooled.</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>A look inside</h2>
-    <p class="sub">Dashboard, calendar, reports, and contract setup.</p>
-    <div class="shots">
-      <img src="ledger-1.jpg" alt="Welcome and sign in" loading="lazy">
-      <img src="ledger-main.jpg" alt="Today dashboard" loading="lazy">
-      <img src="ledger-2.jpg" alt="Shift calendar with overlays" loading="lazy">
-      <img src="ledger-3.jpg" alt="Reports: production and bonus" loading="lazy">
-      <img src="ledger-4.jpg" alt="Export reports as CSV" loading="lazy">
-      <img src="ledger-5.jpg" alt="Set up your contract" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="privacy">
-      <p class="badge">Privacy first</p>
-      <h2 style="font-size:24px;margin:8px 0 10px">Built to hold no patient information</h2>
-      <p style="color:var(--fade)">Tatanka Ledger is a personal tracking tool, not a medical record. It stores only your own production and compensation data, scoped to your account. You can delete your account and all of its data at any time from within the app.</p>
-      <p style="margin-top:18px">
-        <a href="https://tatankalabs.com/#privacy-tatankaledger">Privacy Policy</a> &middot;
-        <a href="https://tatankalabs.com/#terms-tatankaledger">Terms of Service</a> &middot;
-        <a href="https://tatankalabs.com/#delete-account-tatankaledger">Account &amp; Data Deletion</a>
-      </p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <p>A <a href="https://tatankalabs.com/">Tatanka Labs</a> product &nbsp;&middot;&nbsp; <a href="mailto:contact@tatankalabs.com">contact@tatankalabs.com</a></p>
-    <p style="margin-top:8px;color:var(--line)">&copy; 2026 Tatanka Labs LLC</p>
-  </div>
-</footer>
+  <p>Opening Tatanka Ledger… <a href="/app/">Continue&nbsp;&rarr;</a></p>
 </body>
 </html>
